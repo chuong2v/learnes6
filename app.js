@@ -23,8 +23,8 @@ console.log('iterator.next().value ', iterator.next().value);
 console.log('iterator.next().value ', iterator.next().value);
 
 let array = [1, 2, 3];
-// let arr = array[Symbol.iterator]();
-let arr = array.values();
+let arr = array[Symbol.iterator]();
+// let arr = array.values();
 console.log(arr.next());
 console.log(arr.next());
 console.log(arr.next());
