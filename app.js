@@ -6,7 +6,7 @@ var a = {
 var b = {
 	b: 2
 };
-console.log("lodash.assign",_.assign(a, b));
+console.log("lodash.assign", _.assign(a, b));
 
 
 let myIterable = {};
@@ -15,11 +15,18 @@ myIterable[Symbol.Iterator] = function*() {
 	yield 2;
 	yield 3;
 };
-console.log([...myIterable]);
+var iterator = myIterable[Symbol.Iterator]();
+console.log('iterator.next().value ', iterator.next().value);
+console.log('iterator.next().value ', iterator.next().value);
+console.log('iterator.next().value ', iterator.next().value);
+console.log('iterator.next().value ', iterator.next().value);
+console.log('iterator.next().value ', iterator.next().value);
 
-// let array = [1, 3, 4];
+let array = [1, 2, 3];
 // let arr = array[Symbol.iterator]();
-// console.log(arr.next().value);
-// console.log(arr.next().value);
-// console.log(arr.next().value);
-// console.log(arr.next().value);
+let arr = array.values();
+console.log(arr.next());
+console.log(arr.next());
+console.log(arr.next());
+console.log(arr.next());
+console.log(arr.next());
