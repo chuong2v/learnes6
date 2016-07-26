@@ -1,4 +1,11 @@
 import _ from "lodash";
+var app = require('express')();
+//var oauthserver = require('oauth2-server');
+
+var http = require('http').Server(app);
+import ioSocket from 'socket.io';
+var io = ioSocket(http);
+console.log("io.router", io.router);
 
 var a = {
 	a: 1
@@ -30,3 +37,5 @@ console.log(arr.next());
 console.log(arr.next());
 console.log(arr.next());
 console.log(arr.next());
+
+
