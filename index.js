@@ -1,5 +1,5 @@
 // require('babel-register');
 require("babel-core/register");
 require("babel-polyfill");
-// require('./app');
-require('./otp');
+require('./app');
+// require('./otp');
